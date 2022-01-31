@@ -1,0 +1,34 @@
+{%extends "base.html"%}
+
+
+{%block content%}
+
+<div class="flex">
+    <h1 class="hero-title">
+
+    </h1>
+    <a href="{% url 'blog_create' %}" class="nav-links underline"><span class="create">Create a new blog</span></a>
+</div>
+{% for item in result %}
+<div class="blog-card-img">
+    <img src="{{item.header_image.url}}" alt="img" class="img-responsive">
+</div>
+<section class="blogbody">
+
+    <h1><a href="{% url 'blogdetail' item.id %}">{{item.title}}</h1></a>
+
+</section>
+<section class="blogbody1">
+    <em>Designed by {{item.developer}}, posted by {{item.author}}</em>
+</section>
+<br>
+<br>
+<p class="textbody">{{item.body}}</p>
+<br>
+<br>
+{% endfor %}
+<br>
+<br>
+<br>
+
+{%endblock content%}

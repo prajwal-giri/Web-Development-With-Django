@@ -1,0 +1,38 @@
+{%extends "base.html"%}
+
+
+
+{%block content%}
+<a href="{% url 'blog1' %}">
+
+    <h1>Return to Blog Page</h1>
+</a>
+<section class="blogbody">
+    <h1>{{dresult.title}}</h1>
+</section>
+
+<div class="blog-card-img">
+    <img src="{{dresult.header_image.url}}" alt="" class="img-responsive1">
+</div>
+<section class="blogbody1">
+    <em>Designed by {{dresult.developer}}, posted by {{dresult.author}}</em>
+</section>
+
+<br>
+<br>
+<p class="textbody">{{dresult.text}}</p>
+<br>
+<br>
+<br>
+</div>
+<div class="flex">
+
+    <a href="{% url 'blog_edit' dresult.pk %}" class="nav-links underline"><span class="create">Edit this
+            blog</span></a>
+    <a href="{% url 'blog_delete' dresult.pk %}" class="color-red"><span class="create">Delete this
+            blog</span></a>
+</div>
+</div>
+<br>
+<br>
+{%endblock content%}
