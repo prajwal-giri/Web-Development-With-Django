@@ -1,0 +1,62 @@
+{%extends "base.html" %}
+
+{% block content%}
+
+<section class="contactmain">
+    <p class="contacth1">Get in Touch!</p>
+    <p class="contactp">Contact us for a quote for our services</p>
+    <br>
+
+    <form class="abc">
+        <!-- <form action=""></form>  This form action is for serverside action -->
+        <div class="software">
+
+            <h4><label for="fname" class="def">Your Name</label></h4>
+            <span><input type="text" id="name" class="nyc" name="fname" placeholder="Full name" required></span>
+            <br>
+        </div>
+        <div class="software">
+
+            <h4><label for="emailadd" class="def">Your Email</label></h4>
+            <span> <input type="email" id="emailadd" class="nyc" name="emailadd" placeholder="your email here"
+                    required></span>
+        </div>
+
+
+
+
+
+        <!-- <input type="text" name="">  this name attribute is also used for server side back end data retreve. -->
+
+        <!-- 
+        Name attribute also plays an important role in html5 . Example is on like radio button below.
+      
+        <form action="">
+            <input type="radio" name="gender" value="male"> Male <br>
+            <input type="radio" name="gender" value="female"> Female <br>
+            <input type="radio" name="gender" value="male"> Other
+        </form>
+        note: When a user clicks on a radio-button, it becomes checked, and all the other radio-button with equal name
+        become unchecked. -->
+
+
+
+
+        <div class="software">
+            <h4><label for="message" class="def">Your Message:</label></h4>
+
+            <span><textarea name="message" id="message" class="nyc2" cols="50" rows="10"
+                    placeholder=" message...."></textarea></span>
+            <h4><input type="submit" value="Submit"></h4>
+
+        </div>
+
+
+
+
+
+
+
+    </form>
+</section>
+{% endblock content%}

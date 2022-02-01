@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main>
+    <section class="hero">
+        <div class="herotext">
+            <div class="intro">
+                <h1>Hi I’m Prajwal Giri,a Python Developer from Nepal.</h1>
+            </div>
+            <div class="describtion">
+                My work is mainly focused , on coding, designing, deploying, and debugging development projects,
+                typically
+                on the server side (or backend).
+                <br><br>
+                However, Now I also design front end website using HTML, CSS and also⏤ currently freelancing and
+                seeking
+                internship
+                opportunities.
+            </div>
+        </div>
+        <div class="image">
+            <img src="../static/images/Profile Photo.png" alt="PROFILEIMG" class="profile">
+        </div>
+    </section>
+    <section class="middle">
+        <div class="software">
+            <h5>Skills</h5>
+
+            <span>Python, Django, HTML5, CSS3, Git, GitHub
+
+            </span>
+        </div>
+        <br>
+
+        <div class="skills">
+            <h5>Tools</h5>
+            <span>Pycharm, Vscode, Ubuntu, Joplin
+            </span>
+        </div>
+    </section>
+    <section class="end">
+        <div class="left">
+            I am thrilled to work for your next project <img
+                src="/8. static-weekend-project/project-work-folder/staticfolder/images/arrow.png" class="arrow" alt="">
+        </div>
+        <div class="right">
+            <h2>giriprajwal2021@gmail.com</h2><br>
+            <p><a href="{% url 'contact' %}">Contact Me</a></p>
+        </div>
+    </section>
+</main>
+
+{% endblock content%}
