@@ -27,16 +27,22 @@
             </nav>
         </div>
     </header>
+
     <div class="container">
         {% if user.is_authenticated %}
         <div class="flex">
             <h2 class="hero-title">Hi {{ user.username }}!</h2>
+            <h4><a href="{% url 'password_change' %}" class="nav-links">Change Password</a></h4>
+
             <p><a href="{% url 'logout' %}" class="nav-links color-red">Log out</a></p>
+
+
         </div>
         <main>
             <div class="container">
 
                 {% block content%}
+
                 {% endblock content%}
             </div>
         </main>
@@ -44,8 +50,11 @@
         <p class="blog-card-subtitle">You are not logged in.</p>
         <div class="flex mb-4">
             <a href="{% url 'login' %}" class="abc">Log In</a>
+            <h4><a href="{% url 'password_reset1' %}" class="nav-links">Forgot Password! Reset Here</a></h4>
+
             {% endif %}
             <a href="{% url 'signup' %}" class="abc">Sign Up</a>
+
         </div>
         <br>
         <div class="container">
@@ -55,6 +64,16 @@
         <div class="container">
             {% block signup %}
             {% endblock signup %}
+        </div>
+
+        <div class="container">
+            {% block reset %}
+            {% endblock reset %}
+        </div>
+
+        <div class="container">
+            {% block resetdone %}
+            {% endblock resetdone %}
         </div>
 
 
