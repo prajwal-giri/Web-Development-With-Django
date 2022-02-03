@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- <div class="flex">
+    <h1 class="hero-title">
+
+    </h1> -->
+<section class="blogbody">
+
+    <h1>
+
+        Welcome to the Blogs Page
+    </h1>
+
+    <br>
+    <br>
+
+
+    </div>
+    {% for item in result6 %}
+    <div class="blog-card-img">
+        <img src="{{item.blogimage.url}}" alt="img" class="img-responsive">
+    </div>
+    <section class="blogbody">
+
+        <h1>
+
+            {{item.title}}
+        </h1>
+
+
+    </section>
+
+    <section class="blogbody1">
+        <em> {{item.intro}}</em>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    {% endfor %}
+
+
+    {% endblock content %}

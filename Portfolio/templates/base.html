@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <header>
+
+        <div class="navbar">
+            {% for item in result%}
+            <a href="{% url 'home' %}"><img src="{{item.header_image.url}}" alt="" class="img-responsive"></a>
+            <nav>
+
+                <!-- <a href="">{{item.navigation1}}</a> -->
+                <a href="{% url 'blog1' %}">{{item.navigation2}}</a>
+
+            </nav>
+            {% endfor %}
+        </div>
+    </header>
+
+
+
+    {% block content %}
+    {% endblock content %}
+
+
+
+    <footer>
+        {% for item in result1 %}
+        <div class="downleft">
+            {{item.footerheading}}
+        </div>
+        <div class="downright">
+
+            <a href="https://www.facebook.com" class="social-link" target="_blank">{{item.footer1}}</a>
+            <a href="https://www.linkedin.com" class="social-link" target="_blank">{{item.footer2}}</a>
+            <a href="https://twitter.com/?lang=en" class="social-link" target="_blank">{{item.footer3}}</a>
+            {% endfor %}
+        </div>
+
+    </footer>
+</body>
+
+</html>

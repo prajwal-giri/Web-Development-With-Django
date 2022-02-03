@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main>
+    <section class="hero">
+        {% for item in result3 %}
+        <div class="herotext">
+            <div class="intro">
+                <h1>{{item.herotitle}}</h1>
+            </div>
+            <div class="describtion">
+                {{item.herotext1}}
+                <br><br>
+                {{item.herotext2}}
+            </div>
+        </div>
+        <div class="image">
+            <img src="{{item.hero_image.url}}" alt="image of profile" class="profile">
+
+        </div>
+        {% endfor %}
+    </section>
+    <section class="middle">
+        {% for item in result4 %}
+        <div class="software">
+            <h5>{{item.middletitle}}</h5>
+
+            <span>{{item.middletext}}
+
+            </span>
+        </div>
+        <br>
+        {% endfor %}
+    </section>
+
+
+    <section class="end">
+        {% for item in result5 %}
+        <div class="left">
+            {{ item.endtext }}
+        </div>
+        <div class="right">
+            <h2> {{ item.endemail }}</h2><br>
+            <p><a href="#">{{ item.contactme}}</a></p>
+        </div>
+        {% endfor %}
+    </section>
+</main>
+
+{% endblock content%}
