@@ -14,15 +14,15 @@
     <header>
 
         <div class="navbar">
-            {% for item in result%}
-            <a href="{% url 'home' %}"><img src="{{item.header_image.url}}" alt="" class="img-responsive"></a>
+
+            <a href="{% url 'home' %}"><img src="{{result.header_image.url}}" alt="" class="img-responsive"></a>
             <nav>
 
                 <!-- <a href="">{{item.navigation1}}</a> -->
-                <a href="{% url 'blog1' %}">{{item.navigation2}}</a>
+                <a href="{% url 'blog1' %}">{{result.navigation2}}</a>
 
             </nav>
-            {% endfor %}
+
         </div>
     </header>
 
@@ -34,16 +34,16 @@
 
 
     <footer>
-        {% for item in result1 %}
+
         <div class="downleft">
-            {{item.footerheading}}
+            {{result.footerheading}}
         </div>
         <div class="downright">
 
-            <a href="https://www.facebook.com" class="social-link" target="_blank">{{item.footer1}}</a>
-            <a href="https://www.linkedin.com" class="social-link" target="_blank">{{item.footer2}}</a>
-            <a href="https://twitter.com/?lang=en" class="social-link" target="_blank">{{item.footer3}}</a>
-            {% endfor %}
+            <a href="https://www.facebook.com" class="social-link" target="_blank">{{result.footer1}}</a>
+            <a href="https://www.linkedin.com" class="social-link" target="_blank">{{result.footer2}}</a>
+            <a href="https://twitter.com/?lang=en" class="social-link" target="_blank">{{result.footer3}}</a>
+
         </div>
 
     </footer>

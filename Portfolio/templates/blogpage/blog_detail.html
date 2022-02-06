@@ -1,0 +1,30 @@
+{%extends "base.html"%}
+
+
+
+{%block content%}
+<a href="{% url 'blog1' %}">
+
+    <h1>Return to Blog Page</h1>
+</a>
+<section class="blogbody">
+    <h1>{{result3.title}}</h1>
+</section>
+
+<div class="blog-card-img">
+    <img src="{{result3.blogimage.url}}" alt="" class="img-responsive1">
+</div>
+
+
+<br>
+<br>
+<p class="textbody">{{result3.body}}</p>
+<br>
+<br>
+<br>
+</div>
+
+</div>
+<br>
+<br>
+{%endblock content%}

@@ -4,47 +4,56 @@
 
 <main>
     <section class="hero">
-        {% for item in result3 %}
+
         <div class="herotext">
             <div class="intro">
-                <h1>{{item.herotitle}}</h1>
+                <h1>{{result.herotitle}}</h1>
             </div>
             <div class="describtion">
-                {{item.herotext1}}
+                {{result.herotext1}}
                 <br><br>
-                {{item.herotext2}}
+                {{result.herotext2}}
             </div>
         </div>
         <div class="image">
-            <img src="{{item.hero_image.url}}" alt="image of profile" class="profile">
+            <img src="{{result.hero_image.url}}" alt="image of profile" class="profile">
 
         </div>
-        {% endfor %}
+
     </section>
     <section class="middle">
-        {% for item in result4 %}
-        <div class="software">
-            <h5>{{item.middletitle}}</h5>
 
-            <span>{{item.middletext}}
+        <div class="software">
+            <h5>{{result.middletitle}}</h5>
+
+            <span>{{result.middletext}}
 
             </span>
         </div>
         <br>
-        {% endfor %}
+
+        <div class="software">
+            <h5>{{result.middletitle1}}</h5>
+
+            <span>{{result.middletext1}}
+
+            </span>
+        </div>
+        <br>
+
     </section>
 
 
     <section class="end">
-        {% for item in result5 %}
+
         <div class="left">
-            {{ item.endtext }}
+            {{ result.endtext }}
         </div>
         <div class="right">
-            <h2> {{ item.endemail }}</h2><br>
-            <p><a href="#">{{ item.contactme}}</a></p>
+            <h2> {{ result.endemail }}</h2><br>
+            <p><a href="#">{{ result.contactme}}</a></p>
         </div>
-        {% endfor %}
+
     </section>
 </main>
 

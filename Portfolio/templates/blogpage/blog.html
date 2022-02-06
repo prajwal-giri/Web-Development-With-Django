@@ -18,16 +18,17 @@
 
 
     </div>
-    {% for item in result6 %}
+    {% for item in result1 %}
     <div class="blog-card-img">
         <img src="{{item.blogimage.url}}" alt="img" class="img-responsive">
     </div>
     <section class="blogbody">
 
-        <h1>
 
-            {{item.title}}
-        </h1>
+        <h1><a href="{% url 'blogdetail' item.id %}">{{item.title}}</h1></a>
+
+
+
 
 
     </section>

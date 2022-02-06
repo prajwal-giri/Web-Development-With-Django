@@ -3,38 +3,26 @@ from django.db import models
 # Create your models here.
 
 
-class HeaderNav(models.Model):
+class HomePage(models.Model):
 
     header_image = models.ImageField(
         null=True, blank=True, upload_to='images/')
     navigation1 = models.CharField(max_length=100, null=True, blank=True)
     navigation2 = models.CharField(max_length=100, null=True, blank=True)
 
-
-class FooterNav(models.Model):
-    footerheading = models.CharField(max_length=100, null=True, blank=True)
-    footer1 = models.CharField(max_length=100, null=True, blank=True)
-    footer2 = models.CharField(max_length=100, null=True, blank=True)
-    footer3 = models.CharField(max_length=100, null=True, blank=True)
-
-
-class HeroHeadSection(models.Model):
     herotitle = models.TextField(null=True, blank=True)
     herotext1 = models.TextField(null=True, blank=True)
     herotext2 = models.TextField(null=True, blank=True)
     hero_image = models.ImageField(
         null=True, blank=True, upload_to='images/')
-
-
-class HeroMiddleSection(models.Model):
     middletitle = models.CharField(max_length=100, null=True, blank=True)
     middletext = models.TextField(null=True, blank=True)
-
-    def __str__(self):
-        return self.middletitle
-
-
-class HeroEndSection(models.Model):
+    middletitle1 = models.CharField(max_length=100, null=True, blank=True)
+    middletext1 = models.TextField(null=True, blank=True)
     endtext = models.CharField(max_length=100, null=True, blank=True)
     endemail = models.CharField(max_length=100, null=True, blank=True)
     contactme = models.CharField(max_length=100, null=True, blank=True)
+    footerheading = models.CharField(max_length=100, null=True, blank=True)
+    footer1 = models.CharField(max_length=100, null=True, blank=True)
+    footer2 = models.CharField(max_length=100, null=True, blank=True)
+    footer3 = models.CharField(max_length=100, null=True, blank=True)
